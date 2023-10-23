@@ -1,0 +1,152 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Index",
+            "name": "category",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Zaawas. Rzecz. Baza",
+            "name": "proc_rzecz_baza",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Zaawas. Rzecz. Real",
+            "name": "proc_rzecz_real",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Przyrost z -1mc",
+            "name": "przyrost_rzecz",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Płatności",
+            "name": "plat_real",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Płatność z -1mc",
+            "name": "plat_mc",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Plan Bazowy z mc",
+            "name": "plat_baza",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Wartość Umowy",
+            "name": "umowa",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Plan Aktualny z -1mc",
+            "name": "plan_mc",
+            "kind": "Measure"
+        }
+
+
+
+
+    ],
+    "objects": {
+        "dataPoint": {
+            "displayName": "Data colors",
+            "properties": {
+                "defaultColor": {
+                    "displayName": "Default color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "showAllDataPoints": {
+                    "displayName": "Show all",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "fill": {
+                    "displayName": "Fill",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "fillRule": {
+                    "displayName": "Color saturation",
+                    "type": {
+                        "fill": {}
+                    }
+                },
+                 "fontSize": {
+                    "displayName": "Text Size",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "category"
+                    },
+                    "dataReductionAlgorithm": {
+                        "top": {}
+                    }
+                },
+                "values": {
+                    "select": [
+                        {
+                            "for": {
+                                "in": "proc_rzecz_baza"
+                            }
+                        }, {
+                            "for": {
+                                "in": "proc_rzecz_real"
+                            }
+                        }, {
+                            "for": {
+                                "in": "przyrost_rzecz"
+                            }
+                        }, {
+                            "for": {
+                                "in": "plat_real"
+                            }
+                        }, {
+                            "for": {
+                                "in": "plat_mc"
+                            }
+                        }, {
+                            "for": {
+                                "in": "plat_baza"
+                            }
+                        }, {
+                            "for": {
+                                "in": "umowa"
+                            }
+                        }, {
+                            "for": {
+                                "in": "plan_mc"
+                            }
+                        }
+        
+                    ]
+                }
+            }
+        }
+    ]
+}
